@@ -1,18 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const HelloWorld = () => <div>HELLOWORLD!!</div>;
-
-const OtherWorld = () => <div>OTHERWORLD!!</div>;
-
-const AnotherWorld = () => <div>ANOTEHRWORLD!!</div>;
-
+const TodoList = (props) => (
+  <ul>
+    <li>{props.todos[0]}</li>
+    <li>{props.todos[1]}</li>
+    <li>{props.todos[2]}</li>
+  </ul>
+);
 const App = () => (
   <div>
-    슈퍼월드!
-    <HelloWorld />
-    <OtherWorld />
-    <AnotherWorld />
+    <h2>My Todo List</h2>
+    <TodoList todos={['Learn React', 'Crush Recast.ly', 'Maybe sleep']} />
   </div>
 );
 
